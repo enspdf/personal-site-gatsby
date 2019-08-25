@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import repos from '../data/repos';
 import Repo from './repo';
 
 export default () => {

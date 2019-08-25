@@ -1,5 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import Posts from './posts';
+import Certificate from './certificate';
+import Course from './course';
 
 export default () => {
     const data = useStaticQuery(graphql`
@@ -12,6 +15,11 @@ export default () => {
                         score
                         code
                     }
+                    courses {
+                        title
+                        progress
+                        url
+                    }
                 }
             }
         }
@@ -21,18 +29,19 @@ export default () => {
         <section>
             <div className="mt-24">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center">Mis certificados online en Códigofacilito</h2>
-                    <div className="flex mt-8">
-                        {
-                            data.codigofacilitoJson.data.certificates.map(certificate => (
-                                <div className="shadow p-8 bg-white mr-4">
-                                    <h4 className="font-bold">{certificate.title}</h4>
-                                    <div className="text-center">
-                                        <span className="inline-block bg-purple-200 text-purple-700 p-2 mt-2 radius">Calificación: {certificate.score}</span>
-                                    </div>
-                                </div>
-                            ))
-                        }
+                    <div className="overflow-x-scroll">
+                        <Posts
+                            data={data.codigofacilitoJson.data.certificates}
+                            card={Certificate}
+                            title="Mis certificados online en Códigofacilito"
+                        />
+                    </div>
+                    <div className="overflow-x-scroll">
+                        <Posts
+                            data={data.codigofacilitoJson.data.courses}
+                            card={Course}
+                            title="Mis Cursos en Códigofacilito"
+                        />
                     </div>
                 </div>
             </div>
