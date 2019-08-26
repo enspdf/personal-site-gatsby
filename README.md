@@ -1,3 +1,7 @@
+[See Live](https://sad-wozniak-45c6f8.netlify.com)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4cc99709-1915-4bd1-ab66-d973d14cca9c/deploy-status)](https://app.netlify.com/sites/sad-wozniak-45c6f8/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
