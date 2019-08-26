@@ -18,3 +18,9 @@
 .repos-list li {
     break-inside: avoid-column;
 }
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    @apply bg-blue-200 text-purple-700 text-xs p-2
+}
